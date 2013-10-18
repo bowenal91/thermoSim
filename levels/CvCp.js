@@ -206,7 +206,7 @@ LevelData = {
 						resetId: 125,
 						quiz:[
 								{		
-									questionText: "Here's the same system with the work done displayed.  Increase the temperature by 100 K.  You predicted that get('foo5', 'string', 'noValue') kJ of work would be done.  How does this compare to the experimental result?",
+									questionText: "Here's the same system with the work done displayed.  Increase the temperature by 100 K.  You predicted that get('foo6', 'string', 'noValue') kJ of work would be done.  How does this compare to the experimental result?",
 									storeAs: 'foo7', 
 									type:'text', 
 									text:'Type your answer here.', 
