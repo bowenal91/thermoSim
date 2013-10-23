@@ -153,7 +153,7 @@ LevelData = {
 				cutScene:true, 
 				quiz:[						
 					{
-						questionText: "<p>The system had a constant external pressure of 3 bar, contained one mole of an ideal monatomic gas, and was heated by 100 K.</p>  Using the First Law of Thermodynamics, what should the change in system volume have been?<br>", 
+						questionText: "<p>The system had a constant external pressure of 1.5 bar, contained one mole of an ideal monatomic gas, and was heated by 100 K.</p>  Using the First Law of Thermodynamics, what should the change in system volume have been?<br>", 
 						type: 'textSmall', 
 						storeAs: 'foo5', 
 						units: 'L', 
