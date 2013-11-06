@@ -24,7 +24,7 @@ LevelData = {
 				objs: [
 					{
 						type: 'Cell',
-						attrs: {pos: P(150, 150), rad: 100, handle: 'squishy', parentWallHandle: 'wally', temp: 298, dots: {fairy: 200, heavy: 50}, boundingCorner: P(70, 70), boundingVector: V(300, 350), numCorners: 18, col: Col(0, 150, 0), innerChanceTransport: {spc1: .7, heavy: .05}, outerChanceTransport: {spc1: .2}}
+						attrs: {pos: P(150, 150), rad: 100, handle: 'squishy', parentWallHandle: 'wally', temp: 298, dots: {spc1: 200}, boundingCorner: P(70, 70), boundingVector: V(300, 350), numCorners: 18, col: Col(0, 150, 0), innerChanceTransport: {spc1: .10, fairy: .10}, outerChanceTransport: {fairy: .1, spc1: 0}}
 					},
 					 {
 						type: 'CompositionController',
@@ -34,8 +34,8 @@ LevelData = {
 							 tempMin: 200,
 							 tempMax: 400,
 							 makeTempSlider: true,
-							 inletDepth: 20,
-							 outletDepth: 25,
+							 inletDepth: 0,
+							 outletDepth: 0,
 							 pressure: 1,
 							 ptIdxs: [0,1,2,3],
 							 flows: [{spcName: 'fairy', temp: 298, nDotMax: .05, tag: 'wally'}],
