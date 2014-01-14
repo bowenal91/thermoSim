@@ -496,6 +496,55 @@ LevelData = {
 			prompts: [
 				{
 					cutScene: true,
+					quiz: [
+						{
+							type: 'text',
+							questionText: '<p>Now that you have completed the simulation, what would you say it means for a system to be saturated?',
+							text: 'type your answer here',
+							storeAs: 'finalAns0',
+							CWQuestionId: 185
+						},
+						{
+							type: 'text',
+							questionText: '<p>For any given system temperature, how many pressures are there where the system can be considered saturated?',
+							text: 'type your answer here',
+							storeAs: 'finalAns1',
+							CWQuestionId: 186
+						}
+					]
+				}
+			]
+		},
+		{
+			sceneData: undefined,
+			prompts: [
+				{
+					cutScene: true,
+					quiz: [
+						{
+							type: 'text',
+							questionText: '<p>Identify and describe in 1-2 sentences the most important concepts about phase equilibria this interactive virtual laboratory addressed.',
+							text: 'type your response here',
+							storeAs: 'finalAns2',
+							CWQuestionId: 187
+							
+						},
+						{
+							type: 'text',
+							questionText: '<p>How do these concepts connect to what you have been learning in class?',
+							text: 'type your response here',
+							storeAs: 'finalAns3',
+							CWQuestionId: 188
+						}
+					]
+				}
+			]
+		},
+		{
+			sceneData: undefined,
+			prompts: [
+				{
+					cutScene: true,
 					title: '',
 					text: 'You have completed the simulation.',
 					quiz: [

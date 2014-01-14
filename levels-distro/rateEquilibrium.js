@@ -686,19 +686,49 @@ LevelData = {
 							},
 					]
 				},
+			]
+		},
+		{
+			sceneData: undefined,
+			prompts: [
 				{
-					sceneData: undefined, 
 					cutScene: true,
-					quiz:[
-							{
-								questionText: '<br>In a couple of sentences, explain the difference between reaction rate and equilibrium.<br>',
-								storeAs: 'foo27', 
-								type:'text',
-								text:'Type your answer here',
-								CWQuestionId: 63
-							},
+					quiz: [
+						{
+							type: 'text',
+							questionText: '<p>Now that you have completed the simulation, how would you describe the difference between reaction rate and reaction equilbrium? How does each property change with temperature?',
+							text: 'type your answer here',
+							storeAs: 'foo10',
+							CWQuestionId: 63
+						}	
 					]
-				},
+				}
+			]
+		},
+		{
+			sceneData: undefined,
+			prompts: [
+				{
+					cutScene: true,
+					quiz: [
+						{
+							type: 'text',
+							questionText: '<p>Identify and describe in 1-2 sentences the most important concepts about reaction kinetics and equilibria this interactive virtual laboratory addressed.',
+							text: 'type your response here',
+							storeAs: 'finalAns1',
+							CWQuestionId: 183
+							
+						},
+						{
+							type: 'text',
+							questionText: '<p>How do these concepts connect to what you have been learning in class?',
+							text: 'type your response here',
+							storeAs: 'finalAns2',
+							CWQuestionId: 184
+							
+						}
+					]
+				}
 			]
 		},
 		{
