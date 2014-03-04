@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2013  Daniel Reid
+Copyrightsdf (C) 2013  Daniel Reid
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -33,11 +33,12 @@ SceneNavigator.prototype = {
 		var now = timeline.now();
 		var willAdvance = forceAdvance || this.checkWillAdvance();
 		var amAdvancing = true;
+		var questions = window.curLevel.quiz? window.curLevel.quiz.questions : false;
 		if (willAdvance) {
 			// if (curPrompt) {
 				// curPrompt.finished = true;
 			// }
-			this.sendAnswersToCW(window.curLevel.quiz);
+			this.sendAnswersToCW(window.curLevel.quiz);	
 			if (checkDirs) {
 				var dirExpr = this.checkDirections(curPrompt.directions);
 			}
@@ -56,9 +57,14 @@ SceneNavigator.prototype = {
 				}
 			}
 			//return true;
+		} else {
+			//Incorrect multiple choice answers get sent here.
+			for (var i=0; i<questions.length; i++) {
+				if (questions[i].type == 'multChoice') {
+					questions[i].sendAnswerToCW();
+				}
+			}
 		}
-		//return false;
-		
 	},
 
 	getNextIdxs: function() {

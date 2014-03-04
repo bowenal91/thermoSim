@@ -85,7 +85,7 @@ LevelData = {
 					quiz: [
 						{
 							questionText: "<center>##nc_v\\Delta T = -P_{ext}\\Delta V ## </center> <p>From the equation above we see that temperature increases as we do work by decreasing volume.  Temperature is an expression of molecular kinetic energy, so as the system is compressed, the molecules must speed up.  These ideal gas molecules can be thought of as perfectly elastic bouncy balls.  Using the movable wall above, can you determine what event causes the molecule's speed to change?  Can you explain why that would cause a temperature change in many molecules?",
-							type: 'text', CWQuestionId: 3, storeAs: 'FirstSceneAnswer', Text: 'Type your answer here.'}
+							type: 'text', CWQuestionId: 3, storeAs: 'FirstSceneAnswer', text: 'Type your answer here.'}
 					],
 					
 				},
@@ -98,6 +98,52 @@ LevelData = {
 		},
 		{//Second Scene
 			sceneData: {//Scene 2
+				walls: [
+					{pts: [P(40,60), P(510,60), P(510,380), P(40,380)], handler: 'staticAdiabatic', handle: 'SecondWall', border: {type: 'open'}}
+				],
+				dots: [
+					{spcName: 'spc2', pos: P(55, 75), dims: V(450,300), count: 900, temp: 200, returnTo: 'SecondWall', tag: 'SecondWall'},
+					{spcName: 'spc3', pos: P(55, 75), dims: V(450,300), count: 900, temp: 200, returnTo: 'SecondWall', tag: 'SecondWall'}
+				],
+				objs: [
+					{type: 'Piston',
+						attrs: {handle: 'PistonOne', wallInfo: 'SecondWall', min: 2, init: 0, max: 20, makeSlider: false}
+					},
+					{type: 'DragWeights',
+						attrs: {handle: 'DragsOne', wallInfo: 'SecondWall', weightDefs: [{count:1, pressure:13}], weightScalar: 10, pInit: 2, pistonOffset: V(0,-10), displayText: false}
+					}			
+				],
+			},
+			prompts:[
+				{//Prompt 0
+					sceneData:{
+						triggers: [
+								{handle: 'CheckP', expr: 'pExt("SecondWall")==15', satisfyCmmds: ['curLevel.dragWeightsDragsOne.disable()'], priority: 1},
+								{handle: 'CheckVol', expr: 'vol("SecondWall")<8', message: "Place the block on the piston", priority: 1}
+							]
+					},
+					resetId: 191,
+					quiz: [
+						{
+							questionText: "Click and drag the block onto the piston. Where do molecules have the greatest speed when the piston first starts compressing? How does molecular speed change after the system reaches a new equilibrium?",
+							CWQuestionId: 189, type: 'text', storeAs: 'concept1', text: 'Type your answer here'
+						},
+					],
+				},
+				{
+					sceneData: undefined,
+					resetId: 192,
+					quiz: [
+						{
+							questionText: 'What event changes the molecular speed?', 
+							CWQuestionId: 190, type: 'text', storeAs: 'concept2', text: 'Type your answer here'
+						}
+					]
+				}
+			]
+		},
+		{//Third Scene
+			sceneData: {//Scene 3
 				walls: [
 					{pts: [P(40,60), P(510,60), P(510,380), P(40,380)], handler: 'staticAdiabatic', handle: 'SecondWall', border: {type: 'open'}}
 				],
@@ -149,8 +195,8 @@ LevelData = {
 			]
 		},
 		
-		{//Third Scene
-			sceneData: {//Scene 3
+		{//Fourth Scene
+			sceneData: {//Scene 4
 				walls: [
 					{pts: [P(40,60), P(510,60), P(510,380), P(40,380)], handler: 'staticAdiabatic', handle: 'ThirdWall', border: {type: 'open'}}
 				],

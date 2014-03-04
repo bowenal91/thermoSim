@@ -698,7 +698,7 @@ LevelData = {
 							type: 'text',
 							questionText: '<p>Now that you have completed the simulation, how would you describe the difference between reaction rate and reaction equilbrium? How does each property change with temperature?',
 							text: 'type your answer here',
-							storeAs: 'foo10',
+							storeAs: 'foo27',
 							CWQuestionId: 63
 						}	
 					]
