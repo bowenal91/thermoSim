@@ -8,7 +8,7 @@ LevelData = {
 		{spcName: 'ugliest', m: 4, r: 2, sF298: -3.3, col: Col(255, 30, 62), cv: 3 * R, hF298: -12.5, hVap298: 10, antoineCoeffs: {}, cpLiq: 12, spcVolLiq: 1}
 	],
 	mainSequence: [
-		{//S6
+		{//First Scene
 			sceneData: undefined, 
 			cutScene: true,
 			prompts:[
@@ -22,13 +22,13 @@ LevelData = {
 								type:'textSmall',
 								units: '',
 								text:'', 
-								CWQuestionId: 49
+								CWQuestionId: 193
 							},
 					]
 				}
 			]
 		},
-		{//S7
+		{//Second Scene
 			sceneData: {
 				walls: [
 						{pts: [P(50, 50), P(500, 50), P(500, 350), P(50, 350)], handler: 'cVIsothermal', temp: 300, isothermalRate: 5, handle: 'wally', vol: 12, border: {type: 'wrap', thickness: 5, yMin: 30}} 
@@ -71,7 +71,7 @@ LevelData = {
 			prompts:[
 				{
 					sceneData: undefined,
-					resetId: 135,
+					resetId: 212,
 					cutScene: false, 
 					quiz:[
 							{
@@ -80,21 +80,21 @@ LevelData = {
 								type:'textSmall',
 								units:'seconds',
 								text:'', 
-								CWQuestionId: 50
+								CWQuestionId: 194
 							},
 							{
 								storeAs: 'foo3',
 								questionText: "How does the equilibrium mole fraction compare to what you calculated?",
 								type: 'text',
 								text: 'Type your answer here',
-								CWQuestionId: 98888888
+								CWQuestionId: 195
 							},
 					
 					]
 				},
 				{
 					sceneData: undefined, 
-					resetId: 136,
+					resetId: 213,
 					cutScene: false,
 					quiz:[
 							{
@@ -102,14 +102,14 @@ LevelData = {
 								questionText: "What can you say about the rates of the forward and reverse reactions now that the system is at equilibrium?",
 								type:'text',
 								text:'Type your answer here.', 
-								CWQuestionId:51
+								CWQuestionId:196
 							},
 					
 					]
 				}
 			]
 		},
-		{//S8
+		{//Third Scene
 			sceneData: undefined, 
 			cutScene: true,
 			prompts:[
@@ -122,7 +122,7 @@ LevelData = {
 								questionText: "Next, we are going to conduct the reaction at 500 K. What will the equilibrium mole fraction of B be at this temperature?<br><br>Enter the value as a decimal between 0 and 1", 
 								type:'textSmall',
 								text:'', 
-								CWQuestionId: 52
+								CWQuestionId: 197
 							},
 					]
 				},
@@ -135,7 +135,7 @@ LevelData = {
 								questionText: "How does this value compare to the equilibrium mole fraction at 300 K?<br>What accounts for the change?", 
 								type:'text',
 								text:'Type your answer here.', 
-								CWQuestionId: 53
+								CWQuestionId: 198
 							},
 					
 					]
@@ -149,13 +149,13 @@ LevelData = {
 								questionText: "At 300 K, you said it took get('foo2', 'string', 'noValue') seconds to reach equilibrium.  How do you think this value will compare to the time required to reach equilibrium at 500 K?", 
 								type:'text',
 								text:'Type your answer here.', 
-								CWQuestionId: 54
+								CWQuestionId: 199
 							},
 					]	
 				}
 			]
 		},
-		{//S9
+		{//Fourth Scene
 			sceneData: {
 				walls: [
 						{pts: [P(50, 50), P(500, 50), P(500, 350), P(50, 350)], handler: 'cVIsothermal', temp: 500, isothermalRate: 5, handle: 'wally', vol: 12, border: {type: 'wrap', thickness: 5, yMin: 30}} 
@@ -198,7 +198,7 @@ LevelData = {
 			prompts: [
 				{
 					sceneData: undefined, 
-					resetId: 137,
+					resetId: 214,
 					quiz:[
 							{
 								storeAs: 'foo8', 
@@ -206,20 +206,20 @@ LevelData = {
 								type:'textSmall',
 								text:'', 
 								units: 'seconds',
-								CWQuestionId: 55
+								CWQuestionId: 200
 							},
 					]
 				},
 				{
 					sceneData: undefined, 
-					resetId: 138,
+					resetId: 215,
 					quiz:[
 							{
 								storeAs: 'foo9', 
 								questionText: 'Does the new equilibrium mole fraction match your predicted value of get("foo5", "string", "noValue")?',
 								type:'text',
 								text:'Type your answer here', 
-								CWQuestionId: 56
+								CWQuestionId: 201
 							},
 					]
 				},
@@ -232,7 +232,7 @@ LevelData = {
 								questionText: "Now we will lower the temperature to 100 K.  What will be the equilibrium mole fraction of product B at this temperature?",
 								type:'textSmall',
 								text:'', 
-								CWQuestionId: 57
+								CWQuestionId: 202
 							},
 					
 					]
@@ -246,13 +246,13 @@ LevelData = {
 								questionText: "How do you think the time required to reach equilibrium at 100 K will compare to the times in the other two experiments?",
 								type:'text',
 								text:'Type your answer here.', 
-								CWQuestionId: 58
+								CWQuestionId: 203
 							},
 					]
 				}
 			]
 		},
-		{//S10
+		{//Fifth Scene
 			sceneData: {
 				walls: [
 						{pts: [P(50, 50), P(500, 50), P(500, 350), P(50, 350)], handler: 'cVIsothermal', temp: 100, isothermalRate: 5, handle: 'wally', vol: 12, border: {type: 'wrap', thickness: 5, yMin: 30}} 
@@ -294,32 +294,32 @@ LevelData = {
 			prompts: [
 				{
 					sceneData: undefined,
-					resetId: 139,
+					resetId: 216,
 					text: "Click Enable to start the reaction. You may proceed once the reaction is enabled.",
 				},
 				{
 					sceneData: undefined, 
-					resetId: 140,
+					resetId: 217,
 					quiz:[
 							{
 								questionText: 'Why is the reaction not proceeding?',
 								storeAs: 'foo12', 
 								type:'text',
 								text:'Type your answer here.', 
-								CWQuestionId: 59
+								CWQuestionId: 204
 							},
 					]
 				},
 				{
 					sceneData: undefined, 
-					resetId: 141,
+					resetId: 218,
 					quiz:[
 							{
 								questionText: 'Although it appears nothing is happening, there is a non-zero rate constant in the forward direction. What will be the mole fraction of A if you wait for a very long time?',
 								storeAs: 'foo13', 
 								type:'textSmall',
 								text:'', 
-								CWQuestionId: 60
+								CWQuestionId: 205
 							},
 					]
 				},
@@ -332,14 +332,14 @@ LevelData = {
 								storeAs: 'foo14', 
 								type:'text',
 								text:'Type your answer here', 
-								CWQuestionId: 61
+								CWQuestionId: 206
 							},
 							{
 								questionText: 'Why does reaction equilibrium behave this way? Does it behave this way for all reactions?',
 								storeAs: 'foo15',
 								type: 'text',
 								text: 'Type your answer here',
-								CWQuestionId: 977777777
+								CWQuestionId: 207
 							}
 					]
 				},
@@ -352,20 +352,20 @@ LevelData = {
 								storeAs: 'foo16', 
 								type:'text',
 								text:'Type your answer here', 
-								CWQuestionId: 62
+								CWQuestionId: 208
 							},
 							{
 								questionText: 'Why does the reaction rate behave this way? Does it behave this way for all reactions?',
 								storeAs: 'foo17',
 								type: 'text',
 								text: 'Type your answer here',
-								CWQuestionId: 2000243093209
+								CWQuestionId: 209
 							}
 					]
 				},
 			]
 		},
-		{
+		{//Sixth Scene
 			sceneData: undefined,
 			prompts: [
 				{
@@ -376,7 +376,7 @@ LevelData = {
 							questionText: '<p>Identify and describe in 1-2 sentences the most important concepts about reaction kinetics and equilibria this interactive virtual laboratory addressed.',
 							text: 'type your response here',
 							storeAs: 'finalAns1',
-							CWQuestionId: 183
+							CWQuestionId: 210
 							
 						},
 						{
@@ -384,14 +384,14 @@ LevelData = {
 							questionText: '<p>How do these concepts connect to what you have been learning in class?',
 							text: 'type your response here',
 							storeAs: 'finalAns2',
-							CWQuestionId: 184
+							CWQuestionId: 211
 							
 						}
 					]
 				}
 			]
 		},
-		{
+		{//Completion Scene
 			sceneData: undefined,
 			prompts: [
 				{
