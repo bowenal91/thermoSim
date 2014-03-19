@@ -8,6 +8,24 @@ LevelData = {
 		{spcName: 'ugliest', m: 4, r: 2, sF298: -3.3, col: Col(255, 30, 62), cv: 3 * R, hF298: -12.5, hVap298: 10, antoineCoeffs: {}, cpLiq: 12, spcVolLiq: 1}
 	],
 	mainSequence: [
+		{//Intro Scene	
+		sceneData: undefined, 	
+		prompts:[
+			{//p0, q0
+				sceneData:undefined,
+				cutScene:true,
+				quiz:[
+					{
+						storeAs: 'foo0', 
+						questionText: "<p>In this simulation, we are going to investigate the distinction between chemical reaction rate and equilibrium. In your own words, how would you explain the difference between reaction rate and equilibrium?</p>",
+						type:'text', 
+						text:'Type your answer here.', 
+						CWQuestionId: 219
+					}, 
+				]	
+			},	 
+		]
+		},	
 		{//First Scene
 			sceneData: undefined, 
 			cutScene: true,
@@ -18,7 +36,7 @@ LevelData = {
 					quiz:[
 							{
 								storeAs: 'foo1', 
-								questionText: "Today we are going to examine the difference between reaction rate and equilibrium. For the reaction of ##A \\rightarrow B##: $$\\Delta{h}_{rxn} = -2.5\\frac{kJ}{mol}$$ and $$\\Delta{s}_{rxn} = -3.3\\frac{J}{mol-K}$$ You may assume that both of these values are constant with temperature. The reaction is to take place in an isothermal system held at 300 K. What will be the equilibrium mole fraction of B?", 
+								questionText: "For the ideal gas reaction of ##A \\rightarrow B##: $$\\Delta{h}_{rxn} = -2.5\\frac{kJ}{mol}$$ and $$\\Delta{s}_{rxn} = -3.3\\frac{J}{mol-K}$$ You may assume that both of these values are constant with temperature. This reaction is to take place in an isothermal system held at 300 K. What will be the equilibrium mole fraction of B?", 
 								type:'textSmall',
 								units: '',
 								text:'', 
@@ -315,7 +333,7 @@ LevelData = {
 					resetId: 218,
 					quiz:[
 							{
-								questionText: 'Although it appears nothing is happening, there is a non-zero rate constant in the forward direction. What will be the mole fraction of A if you wait for a very long time?',
+								questionText: 'Although it appears nothing is happening, there is a non-zero rate constant in the forward direction. What will be the mole fraction of B if you wait for a very long time?',
 								storeAs: 'foo13', 
 								type:'textSmall',
 								text:'', 
